@@ -2,12 +2,12 @@
 
 
 import socket
-from odoo.addons.mail.tests.common import TestMail
-from odoo.addons.mail.tests.test_mail_gateway import MAIL_TEMPLATE
+from odoo.addons.test_mail.tests.common import MockEmails
+from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE
 from odoo.tools import mute_logger
 
 
-class TestFetchmailNotifyErrorToSender(TestMail):
+class TestFetchmailNotifyErrorToSender(MockEmails):
 
     def setUp(self):
         super(TestFetchmailNotifyErrorToSender, self).setUp()
